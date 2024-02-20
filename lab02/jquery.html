@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InfoJQ</title>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1>Jquery</h1>
+    <button id="click">Нажми на меня</button>
+    <h2 id="getInfo"></h2>
+
+    <script>
+      $("#click").click(function () {
+        $.ajax({
+          url: "/api/name",
+          dataType: "text",
+          success: function (data) {
+            $("#getInfo").text(data);
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

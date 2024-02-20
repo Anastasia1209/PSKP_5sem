@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    
+</head>
+
+<body>
+    <div id="container">
+        <form action="http://localhost:5000/formparameter" method="POST">
+            <table id="container_table">
+                <tr>
+                    <td>Text</td>
+                    <td><input type="text" id="inpText" name="inpText" required></td>
+                </tr>
+
+                <tr>
+                    <td>Number</td>
+                    <td><input type="number" id="inpNumber" name="inpNumber" required></td>
+                </tr>
+
+                <tr>
+                    <td>Date</td>
+                    <td><input type="date" id="inpDate" name="inpDate" required></td>
+                </tr>
+
+                <tr>
+                    <td>Checkbox</td>
+                    <td>
+                        <input type="checkbox" id="inpCheck1" name="inpCheck1" class="checks">
+                        <input type="checkbox" id="inpCheck2" name="inpCheck2" class="checks">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Radiobutton</td>
+                    <td>
+                        <input type="radio" id="inpRadio" name="inpRadio" class="radios">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Textarea</td>
+                    <td><textarea id="inpTextarea" name="inpTextArea" required></textarea></td>
+                </tr>
+
+
+                <tr>
+                    <td><input type="submit" name="inpSubmitForm" value="Отправить"></td>
+                    <td><input type="submit" name="inpSubmitForm" value="Отправить2"></td>
+
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>

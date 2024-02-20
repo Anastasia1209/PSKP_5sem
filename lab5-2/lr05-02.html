@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма отправки сообщения</title>
+</head>
+
+<body>
+    <h1>Lab5</h1>
+    <form id="message-form" action="http://localhost:5000" method="POST">
+        <div>
+            <div style="flex: 1;">
+                <h3>Отправитель</h3>
+                <input type="text" id="sender" name="sender" placeholder="Имя отправителя" required>
+            </div>
+            <div style="flex: 1;">
+                <h3>Получатель</h3>
+                <input type="text" id="reciever" name="reciever" placeholder="Имя получателя" required>
+            </div>
+        </div>
+        <div>
+            <h3>Сообщение</h3>
+            <textarea id="message" name="message" rows="5" placeholder="Введите ваше сообщение" required></textarea>
+        </div>
+        <div>
+            <button type="submit">Отправить</button>
+        </div>
+    </form>
+</body>
+
+</html>

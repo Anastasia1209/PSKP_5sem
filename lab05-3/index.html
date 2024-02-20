@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lab5</title>
+        <style>
+            div {
+                margin: 20px 0 20px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="mail_container">
+            <div class="sender_container">
+                <label>Email отправителя</label>
+                <input type="email" id="sender" />
+            </div>
+            <div class="sender_container">
+                <label>Pass отправителя</label>
+                <input type="password" id="sender_password" />
+            </div>
+            <div class="receiver_container">
+                <label>Email получателя</label>
+                <input type="email" name="" id="receiver" />
+            </div>
+            <div class="message">
+                <label>Сообщение для отправки</label>
+                <input type="text" id="text" />
+            </div>
+            <div class="button_send">
+                <button onclick="Post()">Отправить сообщение</button>
+            </div>
+            <div id="result"></div>
+        </div>
+
+        <script>
+            function Post() {
+                console.log("Message sent");
+                fetch("http://localhost:5000/send", {
+                    method: "POST",
+                    mode: "no-cors",
+                    headers: {
+                        "Content-Type": "application/json",
+                        Accept: "application/json",
+                    },
+                    body: JSON.stringify({
+                        sender: sender.value,
+                        senderPass: sender_password.value,
+                        receiver: receiver.value,
+                        message: text.value,
+                    }),
+                })
+                    .then((response) => {
+                        return response.json();
+                    })
+                    .then((pdata) => {
+                        console.log("Message", pdata);
+                        result.innerHTML = "Сообщение успешно отправлено";
+                    });
+            }
+        </script>
+    </body>
+</html>

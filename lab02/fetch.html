@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyInfoFetch</title>
+  </head>
+  <body>
+    <h1>fetch</h1>
+    <button id="click">Нажми на меня</button>
+    <h2 id="getInfo"></h2>
+    <script>
+      document.getElementById("click").addEventListener("click", async () => {
+        let resp = await fetch("/api/name");
+        let text = await resp.text();
+        document.getElementById("getInfo").innerHTML = text;
+      });
+    </script>
+  </body>
+</html>

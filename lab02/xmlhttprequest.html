@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Assync</title>
+	</head>
+	<body>
+		<h2>xmlhttprequest</h2>
+		<button id="getText">Нажми на меня</button>
+		<h1 id="inText"></h1>
+		<script>
+			document.getElementById("getText").addEventListener("click", () => {
+				console.log("Click");
+				let xhr = new XMLHttpRequest();
+				xhr.open("GET", "/api/name", true);
+				xhr.send();
+				xhr.onload = function () {
+					console.log("fine");
+					document.getElementById("inText").innerHTML = xhr.response;
+				};
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,5 @@
+﻿  tcp_server.cpp
+D:\Univer\5sem\PSKP\lab10\C++\tcp_udp\tcp_server\tcp_server.cpp(74,20): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\Univer\5sem\PSKP\lab10\C++\tcp_udp\tcp_server\tcp_server.cpp(49,24): warning C4101: end: неиспользованная локальная переменная
+D:\Univer\5sem\PSKP\lab10\C++\tcp_udp\tcp_server\tcp_server.cpp(49,17): warning C4101: start: неиспользованная локальная переменная
+  tcp_server.vcxproj -> D:\Univer\5sem\PSKP\lab10\C++\tcp_udp\x64\Debug\tcp_server.exe

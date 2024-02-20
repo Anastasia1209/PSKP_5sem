@@ -1,0 +1,3 @@
+﻿  tcp_client.cpp
+D:\Univer\5sem\PSKP\lab10\C++\tcp_udp\tcp_client\tcp_client.cpp(47,16): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+  tcp_client.vcxproj -> D:\Univer\5sem\PSKP\lab10\C++\tcp_udp\x64\Debug\tcp_client.exe
